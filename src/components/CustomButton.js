@@ -4,7 +4,6 @@ import React from "react";
 export default function CustomButton({ text, backgroundColor, color }) {
   return (
     <TouchableOpacity
-      onPress={console.log("clicked")}
       style={[styles.button, (styles.backgroundColor = { backgroundColor })]}
     >
       <Text style={[styles.buttonText, (styles.color = { color })]}>
