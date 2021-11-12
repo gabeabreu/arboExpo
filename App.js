@@ -6,8 +6,8 @@ import OnBoarding from "./src/screens/OnBoarding.js";
 import Home from "./src/screens/Home.js";
 
 export default function App() {
-  var logged = false;
-  var firstTime = true;
+  var logged = true;
+  var firstTime = false;
 
   function changeLogin() {
     logged = !logged;

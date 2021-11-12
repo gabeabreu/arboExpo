@@ -1,1 +1,6 @@
-export default function Home() {}
+import React from "react";
+import TopMenu from "../components/TopMenu";
+
+export default function Home() {
+  return <TopMenu />;
+}
