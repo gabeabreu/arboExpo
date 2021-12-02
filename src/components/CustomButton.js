@@ -1,10 +1,14 @@
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import React from "react";
 
-export default function CustomButton({ text, backgroundColor, color }) {
+export default function CustomButton({ text, backgroundColor, color, width }) {
   return (
     <TouchableOpacity
-      style={[styles.button, (styles.backgroundColor = { backgroundColor })]}
+      style={[
+        (styles.width = { width }),
+        styles.button,
+        (styles.backgroundColor = { backgroundColor }),
+      ]}
     >
       <Text style={[styles.buttonText, (styles.color = { color })]}>
         {text}
@@ -20,7 +24,6 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     paddingVertical: 7,
     paddingHorizontal: 10,
-    width: 300,
     margin: "2%",
     shadowColor: "#000",
     shadowOffset: {
