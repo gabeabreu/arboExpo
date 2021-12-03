@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 
 export default function Lists() {
   const [list1, setList1] = useState("#43AB6D");
@@ -30,6 +30,7 @@ export default function Lists() {
         }}
         style={[styles.left, { backgroundColor: list1 }]}
       ></TouchableOpacity>
+
       <TouchableOpacity
         onPress={() => {
           toggle(1);
