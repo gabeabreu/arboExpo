@@ -8,6 +8,6 @@ export default function SelectButtons() {
 const styles = StyleSheet.create({
   main: {
     flex: 0.6,
-    backgroundColor: "black",
+    backgroundColor: "white",
   },
 });

@@ -42,5 +42,6 @@ export default function Carousel(props) {
 const styles = StyleSheet.create({
   component: {
     flex: 0.7,
+    backgroundColor: "#000",
   },
 });
