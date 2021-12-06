@@ -30,11 +30,11 @@ const styles = StyleSheet.create({
   main: {
     flex: 0.6,
     backgroundColor: "white",
-    justifyContent: "space-around",
+    justifyContent: "space-evenly",
   },
   column: {
     flexDirection: "row",
-    justifyContent: "space-around",
+    justifyContent: "space-evenly",
   },
   button: {
     backgroundColor: "#43AB6D",

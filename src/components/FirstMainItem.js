@@ -1,6 +1,6 @@
 import React from "react";
 import RenderItem from "./RenderItem.js";
-import { FlatList, View, StyleSheet, Text, ScrollView } from "react-native";
+import { StyleSheet, Text, ScrollView } from "react-native";
 
 const interesses = [
   {

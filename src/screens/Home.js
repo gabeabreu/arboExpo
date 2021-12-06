@@ -1,20 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, StyleSheet } from "react-native";
 import Carousel from "../components/Carousel";
 import TopMenu from "../components/TopMenu.js";
 import FirstMainItem from "../components/firstMainItem";
-import carouselData from "../assets/data/carouselData";
 import SelectButtons from "../components/selectButtons";
+import SecondMainItem from "../components/SecondMainItem";
 import Lists from "../components/Lists";
+import MainItem from "../components/MainItem";
 
 export default function Home() {
+  const [listSwitch, setListSwitch] = useState(0);
+
+  function listHandle(index) {
+    setListSwitch(index);
+    console.log(index);
+  }
   return (
     <View style={styles.mainView}>
       <TopMenu />
-      <Carousel data={carouselData} />
+      <Carousel />
       <SelectButtons />
-      <Lists />
-      <FirstMainItem />
+      <Lists onChange list={listHandle} />
+      <MainItem showItem={listSwitch} />
     </View>
   );
 }

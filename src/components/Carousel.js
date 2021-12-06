@@ -7,33 +7,25 @@ import {
   Text,
   View,
 } from "react-native";
-const { width, height } = Dimensions.get("screen");
-
-const imageW = width * 0.7;
-const imageH = height * 1.54;
+import AppIntroSlider from "react-native-app-intro-slider";
+import carouselData from "../data/carouselData";
 
 export default function Carousel(props) {
+  function renderItem({ item }) {
+    return (
+      <View style={styles.slider}>
+        <Text>{item.title}</Text>
+        <Text>{item.text}</Text>
+      </View>
+    );
+  }
+
   return (
     <View style={styles.component}>
-      <FlatList
-        data={props.data}
-        keyExtractor={(_, index) => index.toString()}
-        horizontal
-        pagingEnabled
-        renderItem={({ item }) => {
-          return (
-            <View>
-              <Image
-                source={{ uri: img }}
-                style={{
-                  width: imageW,
-                  height: imageH,
-                  resizeMode: "cover",
-                }}
-              />
-            </View>
-          );
-        }}
+      <AppIntroSlider
+        renderItem={renderItem}
+        data={carouselData}
+        showNextButton={false}
       />
     </View>
   );
@@ -42,6 +34,11 @@ export default function Carousel(props) {
 const styles = StyleSheet.create({
   component: {
     flex: 0.7,
+    backgroundColor: "#fff",
+  },
+  slider: {
     backgroundColor: "#000",
+    height: "10%",
+    width: "10%",
   },
 });

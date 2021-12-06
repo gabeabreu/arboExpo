@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 
-export default function Lists() {
+export default function Lists(props) {
   const [list1, setList1] = useState("#43AB6D");
   const [list2, setList2] = useState("#fff");
 
@@ -14,11 +14,13 @@ export default function Lists() {
       button2 = 0;
       setList1("#43AB6D");
       setList2("#fff");
+      props.list(0);
     } else {
       button1 = 0;
       button2 = 1;
       setList2("#43AB6D");
       setList1("#fff");
+      props.list(1);
     }
   }
 
