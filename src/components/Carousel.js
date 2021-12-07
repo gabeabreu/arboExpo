@@ -1,44 +1,48 @@
 import React from "react";
 import {
-  Dimensions,
-  FlatList,
   Image,
   StyleSheet,
   Text,
   View,
+  Dimensions,
+  FlatList,
 } from "react-native";
-import AppIntroSlider from "react-native-app-intro-slider";
-import carouselData from "../data/carouselData";
+const carouselData = require("../data/carousel.json");
+const { width: windowWidth, height: windowHeight } = Dimensions.get("window");
 
-export default function Carousel(props) {
-  function renderItem({ item }) {
-    return (
-      <View style={styles.slider}>
-        <Text>{item.title}</Text>
-        <Text>{item.text}</Text>
-      </View>
-    );
-  }
-
+function Slide({ data }) {
   return (
-    <View style={styles.component}>
-      <AppIntroSlider
-        renderItem={renderItem}
-        data={carouselData}
-        showNextButton={false}
-      />
+    <View
+      style={{
+        height: windowHeight,
+        width: windowWidth,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Image
+        source={{ uri: data.url }}
+        style={{ width: windowWidth * 0.2, height: windowHeight * 0.2 }}
+      ></Image>
+      <Text style={{ fontSize: 20 }}>{data.title}</Text>
+      <Text style={{ fontSize: 15 }}>{data.text}</Text>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  component: {
-    flex: 0.7,
-    backgroundColor: "#fff",
-  },
-  slider: {
-    backgroundColor: "#000",
-    height: "10%",
-    width: "10%",
-  },
-});
+export default function Carousel() {
+  return (
+    <FlatList
+      data={carouselData}
+      style={{ flex: 0.7 }}
+      renderItem={({ item }) => {
+        return <Slide data={item} />;
+      }}
+      pagingEnabled={true}
+      horizontal
+      showsHorizontalScrollIndicator={false}
+    />
+  );
+}
+
+const styles = StyleSheet.create({});
