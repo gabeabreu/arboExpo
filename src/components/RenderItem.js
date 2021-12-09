@@ -21,10 +21,10 @@ const styles = StyleSheet.create({
   listItem: {
     backgroundColor: "#fff",
     borderRadius: 3,
-    marginHorizontal: 10,
+    marginHorizontal: 5,
     marginVertical: 5,
-    height: 90,
-    width: 70,
+    height: 75,
+    width: 60,
     padding: 20,
     justifyContent: "center",
     alignItems: "center",

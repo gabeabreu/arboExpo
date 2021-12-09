@@ -7,16 +7,15 @@ import {
   Dimensions,
   FlatList,
 } from "react-native";
-const carouselData = require("../data/carousel.json");
+const carouselData = require("../data/carouselData");
 const { width: windowWidth, height: windowHeight } = Dimensions.get("window");
 
 function Slide({ data }) {
   return (
     <View
       style={{
-        height: windowHeight,
         width: windowWidth,
-        justifyContent: "center",
+        justifyContent: "start",
         alignItems: "center",
       }}
     >
@@ -34,7 +33,7 @@ export default function Carousel() {
   return (
     <FlatList
       data={carouselData}
-      style={{ flex: 0.7 }}
+      style={{ height: "10%" }}
       renderItem={({ item }) => {
         return <Slide data={item} />;
       }}
@@ -44,5 +43,3 @@ export default function Carousel() {
     />
   );
 }
-
-const styles = StyleSheet.create({});

@@ -45,9 +45,9 @@ export default function Lists(props) {
 
 const styles = StyleSheet.create({
   main: {
-    flex: 0.2,
     flexDirection: "row",
     justifyContent: "space-between",
+    height: "6.5%",
   },
   left: {
     width: "50%",

@@ -15,7 +15,6 @@ export default function TopMenu() {
 const styles = StyleSheet.create({
   TopMenu: {
     backgroundColor: "#43AB6D",
-    flex: 0.15,
     borderBottomLeftRadius: 8,
     borderBottomRightRadius: 8,
     flexDirection: "row",

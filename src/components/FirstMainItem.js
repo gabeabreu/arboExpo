@@ -88,12 +88,12 @@ export default function FirstMainItem() {
 
 const styles = StyleSheet.create({
   listComponent: {
-    flex: 0.1,
     backgroundColor: "#43AB6D",
     height: 40,
   },
   listText: {
     color: "#fff",
-    fontSize: 15,
+    fontSize: 13,
+    marginLeft: 7,
   },
 });

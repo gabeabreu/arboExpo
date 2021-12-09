@@ -28,7 +28,6 @@ export default function SecondMainItem() {
 
 const styles = StyleSheet.create({
   listComponent: {
-    flex: 0.1,
     backgroundColor: "#43AB6D",
     height: 40,
   },

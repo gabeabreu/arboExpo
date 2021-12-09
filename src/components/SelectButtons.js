@@ -28,9 +28,9 @@ export default function SelectButtons() {
 
 const styles = StyleSheet.create({
   main: {
-    flex: 0.6,
     backgroundColor: "white",
     justifyContent: "space-evenly",
+    height: "20%",
   },
   column: {
     flexDirection: "row",
