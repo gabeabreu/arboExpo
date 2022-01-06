@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     borderWidth: 0.5,
     borderColor: "#ffffff",
     borderRadius: 15,
-    height: "75%",
+    height: "180%",
   },
 
   title: {

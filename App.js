@@ -7,7 +7,7 @@ import Home from "./src/screens/Home.js";
 
 export default function App() {
   var logged = true;
-  var firstTime = false;
+  var firstTime = true;
 
   function changeLogin() {
     logged = !logged;

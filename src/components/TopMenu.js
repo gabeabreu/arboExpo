@@ -1,6 +1,8 @@
 import React from "react";
-import { View, StyleSheet, Text, Image } from "react-native";
+import { View, StyleSheet, Text, Dimensions } from "react-native";
 import { Icon } from "react-native-elements";
+
+const { width: windowWidth, height: windowHeight } = Dimensions.get("window");
 
 export default function TopMenu() {
   return (
@@ -20,6 +22,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+    position: "absolute",
+    zIndex: 99,
+    width: windowWidth,
   },
   title: {
     fontSize: 25,

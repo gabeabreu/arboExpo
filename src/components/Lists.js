@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
+import Icon from "react-native-vector-icons/FontAwesome";
 
 export default function Lists(props) {
   const [list1, setList1] = useState("#43AB6D");
@@ -31,14 +32,18 @@ export default function Lists(props) {
           toggle(0);
         }}
         style={[styles.left, { backgroundColor: list1 }]}
-      ></TouchableOpacity>
+      >
+        <Icon name="list-alt" size={20} color={list2}></Icon>
+      </TouchableOpacity>
 
       <TouchableOpacity
         onPress={() => {
           toggle(1);
         }}
         style={[styles.right, { backgroundColor: list2 }]}
-      ></TouchableOpacity>
+      >
+        <Icon name="play-circle" size={20} color={list1}></Icon>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -53,11 +58,31 @@ const styles = StyleSheet.create({
     width: "50%",
     borderTopLeftRadius: "15px",
     borderTopRightRadius: "15px",
+    alignItems: "center",
+    justifyContent: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: -1,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
+    elevation: 2,
   },
   right: {
     width: "50%",
     backgroundColor: "",
     borderTopLeftRadius: "15px",
     borderTopRightRadius: "15px",
+    alignItems: "center",
+    justifyContent: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: -1,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
+    elevation: 2,
   },
 });
