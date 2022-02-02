@@ -129,7 +129,8 @@ const styles = StyleSheet.create({
   },
   listText: {
     color: "#fff",
-    fontSize: 13,
+    fontSize: 14,
     marginLeft: 7,
+    padding: 3,
   },
 });

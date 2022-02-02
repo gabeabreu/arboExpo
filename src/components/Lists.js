@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
+import { Dimensions, StyleSheet, TouchableOpacity, View } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
+
+const { height: windowHeight, width: windowWidth } = Dimensions.get("window");
 
 export default function Lists(props) {
   const [list1, setList1] = useState("#43AB6D");
@@ -31,7 +33,7 @@ export default function Lists(props) {
         onPress={() => {
           toggle(0);
         }}
-        style={[styles.left, { backgroundColor: list1 }]}
+        style={[styles.button, { backgroundColor: list1 }]}
       >
         <Icon name="list-alt" size={20} color={list2}></Icon>
       </TouchableOpacity>
@@ -40,7 +42,7 @@ export default function Lists(props) {
         onPress={() => {
           toggle(1);
         }}
-        style={[styles.right, { backgroundColor: list2 }]}
+        style={[styles.button, { backgroundColor: list2 }]}
       >
         <Icon name="play-circle" size={20} color={list1}></Icon>
       </TouchableOpacity>
@@ -52,37 +54,22 @@ const styles = StyleSheet.create({
   main: {
     flexDirection: "row",
     justifyContent: "space-between",
-    height: "6.5%",
+    height: 60,
+    width: windowWidth,
   },
-  left: {
-    width: "50%",
-    borderTopLeftRadius: "15px",
-    borderTopRightRadius: "15px",
+  button: {
+    width: windowWidth / 2,
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15,
     alignItems: "center",
     justifyContent: "center",
     shadowColor: "#000",
     shadowOffset: {
-      width: 0,
-      height: -1,
+      width: 10,
+      height: 3,
     },
-    shadowOpacity: 0.2,
-    shadowRadius: 1.41,
-    elevation: 2,
-  },
-  right: {
-    width: "50%",
-    backgroundColor: "",
-    borderTopLeftRadius: "15px",
-    borderTopRightRadius: "15px",
-    alignItems: "center",
-    justifyContent: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: -1,
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: 1.41,
-    elevation: 2,
+    shadowOpacity: 0.29,
+    shadowRadius: 4.65,
+    elevation: 7,
   },
 });

@@ -1,5 +1,7 @@
 import React from "react";
-import { Text, View, StyleSheet, FlatList } from "react-native";
+import { Text, View, StyleSheet, FlatList, Dimensions } from "react-native";
+
+const { height: windowHeight, width: windowWidth } = Dimensions.get("window");
 
 export default function RenderItem(props) {
   return (
@@ -23,8 +25,8 @@ const styles = StyleSheet.create({
     borderRadius: 3,
     marginHorizontal: 5,
     marginVertical: 5,
-    height: 75,
-    width: 60,
+    height: windowHeight * 0.13,
+    width: windowWidth * 0.22,
     padding: 20,
     justifyContent: "center",
     alignItems: "center",

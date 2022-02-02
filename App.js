@@ -4,10 +4,14 @@ import { StyleSheet, Text, View } from "react-native";
 import Login from "./src/screens/Login.js";
 import OnBoarding from "./src/screens/OnBoarding.js";
 import Home from "./src/screens/Home.js";
+import { NavigationContainer } from "@react-navigation/native";
+import { createDrawerNavigator } from "@react-navigation/drawer";
+
+const Drawer = createDrawerNavigator();
 
 export default function App() {
   var logged = true;
-  var firstTime = true;
+  var firstTime = false;
 
   function changeLogin() {
     logged = !logged;

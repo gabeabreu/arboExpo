@@ -72,11 +72,11 @@ const styles = StyleSheet.create({
     marginTop: 70,
     marginHorizontal: 25,
     paddingTop: 80,
-    paddingHorizontal: "5%",
+    paddingHorizontal: 5,
     borderWidth: 0.5,
     borderColor: "#ffffff",
     borderRadius: 15,
-    height: "180%",
+    height: 180,
   },
 
   title: {

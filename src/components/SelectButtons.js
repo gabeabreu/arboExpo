@@ -1,6 +1,14 @@
 import React from "react";
-import { Button, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  Dimensions,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import CustomButton from "./CustomButton";
+
+const { width: windowWidth, height: windowHeight } = Dimensions.get("window");
 
 export default function SelectButtons() {
   return (
@@ -28,10 +36,11 @@ export default function SelectButtons() {
 
 const styles = StyleSheet.create({
   main: {
-    backgroundColor: "white",
+    backgroundColor: "#fff",
     justifyContent: "space-evenly",
-    height: "20%",
-    marginTop: "0%",
+    height: 20,
+    width: windowWidth,
+    height: windowHeight * 0.2,
   },
   column: {
     flexDirection: "row",
@@ -40,23 +49,22 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: "#43AB6D",
     borderRadius: 10,
-    width: "40%",
-    height: "150%",
+    width: 170,
+    height: 60,
     alignItems: "center",
     justifyContent: "center",
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
-      height: 1,
+      height: 3,
     },
-    shadowOpacity: 0.2,
-    shadowRadius: 1.41,
-
-    elevation: 2,
+    shadowOpacity: 0.29,
+    shadowRadius: 4.65,
+    elevation: 7,
   },
   buttonText: {
-    color: "white",
+    color: "#fff",
     fontSize: 17,
-    fontWeight: 500,
+    fontWeight: "600",
   },
 });

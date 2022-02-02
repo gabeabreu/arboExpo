@@ -1,5 +1,5 @@
 import React from "react";
-import FirstMainItem from "./firstMainItem";
+import FirstMainItem from "./FirstMainItem";
 import SecondMainItem from "./SecondMainItem";
 
 export default function MainItem(props) {

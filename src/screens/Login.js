@@ -27,13 +27,13 @@ export default function Login() {
           text="Entrar"
           backgroundColor="#FFFFFF"
           color="#43AB6E"
-          width="250px"
+          width={250}
         />
         <CustomButton
           text="Cadastre-se"
           backgroundColor="#43AB6E"
           color="#fff"
-          width="250px"
+          width={250}
         />
         <Text style={styles.forgot}>Esqueci minha senha</Text>
       </View>
@@ -50,14 +50,14 @@ const styles = StyleSheet.create({
 
   container: {
     margin: 0,
-    width: "100%",
+    width: 100,
     alignItems: "center",
   },
 
   profile: {
     resizeMode: "center",
-    margin: "0%",
-    width: "50%",
+    margin: 0,
+    width: 50,
     height: width,
   },
 
@@ -88,14 +88,14 @@ const styles = StyleSheet.create({
   },
 
   btns: {
-    padding: "0%",
+    padding: 0,
     justifyContent: "center",
     alignItems: "center",
-    width: "50%",
+    width: 50,
   },
 
   forgot: {
-    margin: "5%",
+    margin: 5,
     color: "#fff",
   },
 });

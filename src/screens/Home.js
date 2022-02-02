@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, StatusBar } from "react-native";
 import Carousel from "../components/Carousel";
 import TopMenu from "../components/TopMenu.js";
-import FirstMainItem from "../components/firstMainItem";
-import SelectButtons from "../components/selectButtons";
+import FirstMainItem from "../components/FirstMainItem";
+import SelectButtons from "../components/SelectButtons";
 import SecondMainItem from "../components/SecondMainItem";
 import Lists from "../components/Lists";
 import MainItem from "../components/MainItem";
@@ -17,6 +17,7 @@ export default function Home() {
   }
   return (
     <View style={styles.mainView}>
+      <StatusBar />
       <TopMenu />
       <Carousel />
       <SelectButtons />
@@ -29,5 +30,7 @@ export default function Home() {
 const styles = StyleSheet.create({
   mainView: {
     flex: 1,
+    justifyContent: "flex-start",
+    alignItems: "flex-start",
   },
 });
